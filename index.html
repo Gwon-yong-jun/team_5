@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code5ive</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        font-family: 'Arial', sans-serif;
+        background: #fff;
+        text-align: center;
+        padding-top: 10%;
+    }
+
+    .logo {
+        font-size: 48px;
+        font-weight: bold;
+    }
+
+    .g1 {
+        color: #4285F4;
+    }
+
+    .g2 {
+        color: #EA4335;
+    }
+
+    .g3 {
+        color: #FBBC05;
+    }
+
+    .g4 {
+        color: #34A853;
+    }
+
+    .g5 {
+        color: #EA4335;
+    }
+
+    .search-box {
+        margin-top: 30px;
+    }
+
+    .search-box input {
+        width: 400px;
+        height: 40px;
+        border-radius: 25px;
+        border: 1px solid #ddd;
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .search-box button {
+        margin-left: -50px;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .hidden {
+        display: none;
+        margin-top: 40px;
+    }
+
+    .members {
+        margin-top: 30px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        flex-wrap: wrap;
+    }
+
+    .card {
+        border: 1px solid #ccc;
+        border-radius: 12px;
+        padding: 16px;
+        width: 120px;
+        box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1);
+        background: #f9f9f9;
+    }
+
+    #result-section {
+        opacity: 0;
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        transform: translateY(20px);
+        pointer-events: none;
+       
+    }
+
+    
+    #result-section.show {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+
+    .polaroid {
+        background: white;
+        width: 300px;
+        height: 500px;
+        border: 1px solid #ccc;
+        border-radius: 6px;
+        padding: 10px 10px 16px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        transition: transform 0.3s;
+        cursor: pointer;
+    }
+
+    .polaroid:hover {
+        transform: scale(1.03);
+    }
+
+    .polaroid img {
+        width: 280px;
+        height: 400px;
+        border-radius: 4px;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .polaroid .name {
+        font-weight: bold;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <h1 class="logo">
+            <span class="g1">code</span><span class="g2">5</span><span class="g3">i</span><span class="g4">v</span><span
+                class="g5">e</span>
+        </h1>
+
+        <div class="search-box">
+            <input type="text" placeholder="💡돋보기를 눌러주세요 !!" id="search-input">
+            <button id="search-btn">🔍</button>
+        </div>
+
+        <div id="result-section">
+            <section class="team-intro">
+                <p>팀소개
+                </p>
+            </section>
+
+            <section class="members">
+                <div class="card polaroid">
+                    <img src="다운로드 (3).jpg" alt="멤버 1 이미지">
+                    <p class="name">👤 멤버 1</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <script>
+        document.getElementById("search-btn").addEventListener("click", function () {
+            const section = document.getElementById("result-section");
+            section.classList.add("show");
+        });
+    </script>
+
+</body>
+
+</html>
