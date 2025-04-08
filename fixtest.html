@@ -15,7 +15,13 @@
     <style>
         /* Style for our header texts
     * --------------------------------------- */
-        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+        @font-face {
+            font-family: 'GmarketSansMedium';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
 
         h1 {
             font-size: 10em;
@@ -59,7 +65,7 @@
 
         }
 
-        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 
         body {
             margin: 0;
@@ -231,19 +237,20 @@
         }
 
         .team-intro {
+            font-family: 'GmarketSansMedium';
             text-align: left;
-            max-width: 900px;
+            max-width: 1080px;
             margin: 50px auto;
             background: #f5f5f5;
             border-radius: 12px;
-            padding: 30px;
+            padding: 50px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             animation: fadeInUp 1s ease-in-out;
         }
 
 
         .team-intro p:first-child {
-            font-size: 22px;
+            font-size: 30px;
             font-weight: bold;
             color: #2c3e50;
             margin-bottom: 25px;
@@ -255,10 +262,10 @@
 
 
         .team-intro p:not(:first-child) {
-            font-size: 16px;
+            font-size: 25px;
             color: #555;
             line-height: 1.6;
-            margin: 6px 0;
+            margin: 7px 0;
         }
 
 
@@ -338,20 +345,21 @@
 
         <div class="section" id="section2">
             <section class="team-intro">
-<<<<<<< HEAD
-                <p>🌱저희는 Spring 7기에서 함께하게 된 6명의 팀원으로 구성된 <span class="rainbow-text">Code5ive</span>입니다❗</p>
-                <p>팀 이름은 5조라는 조 번호에서 시작됐지만, 그 안엔 저희의 코드에 대한 열정과 <span style="font-weight: bold; color: #34A853;">다섯
-                        배 !</span>의 성장 의지를 담고 있어요.</p>
-=======
-                <p><button id="btn3" class="button-box">🌱</button>저희는 백엔드 부트캠프에서 함께하게 된 6명의 팀원으로 구성된 code5ive입니다.</p>
-                <p>팀 이름은 5조라는 조 번호에서 시작됐지만, 그 안엔 저희의 코드에 대한 열정과 다섯 배의 성장 의지를 담고 있어요.</p>
->>>>>>> 6a6c60097e5af945dce44f0d30386fb8218a44ef
-                <p>이번 프로젝트는 단 1주일 동안 진행되지만, 그 안에서 최대한 많은 걸 배우고 나누자는 마음으로 모였습니다.</p>
-                <p>처음 접하는 기술도 많고, 익숙하지 않은 부분도 있지만, 서로 도우며 하루하루 성장해 나가고 있습니다.</p>
+                <p>🌱저희는 Spring 7기에서 함께하게 된 <span class="rainbow-text">Code5ive</span>입니다❗</p>
+                <p>팀 이름은 <span style="color: #4285F4;">5조</span>라는 조 번호에서 시작됐고,</p>
+                <p>그 안엔 저희의 코드에 대한 열정과 <span style="font-weight: bold; color: #34A853;">다섯배
+                        !</span>의 성장 의지를 담고 있어요.</p>
+                <p>우리에게 주어진 시간은 <span style="color: #EA4335;">1주일 !</span> 그 안에서 최대한 많은 걸 배우고 나누자는 마음으로 임했습니다.</p>
+                <p>처음 접하는 기술도 많고 익숙하지 않은 부분도 있었음에도 불구하고</p>
+                <p>서로 도우며 하루하루 성장해 나가고 있습니다.</p>
                 <p>짧은 시간이지만, 우리가 함께 만든 시간만큼은 오래 기억에 남을 것 같습니다.</p>
-                <p><span class="rainbow-text">Code5ive</span>는 단순한 팀 이름이 아니라, 열정과 성장을 향한 우리의 다짐이기도 합니다 😂</p>
-                <p>비록 시작은 미미하지만만, 이 경험을 통해 더 큰 개발자로 나아갈 첫걸음을 내딛고 있습니다. <span
-                        style="font-weight: bold; color: #ff0000;">화이팅</span>🔥</p>
+                <p><span class="rainbow-text">Code5ive</span>는 단순한 팀 이름이 아니라, <span style="color: #FBBC05;">열정과
+                        성장</span>을 향한 우리의
+                    다짐이기도 합니다 😂</p>
+                <p>우리는 앞으로 이 프로젝트를 통해 더 큰 개발자로 나아갈 첫걸음을 내딛어 보려고합니다 ! </p>
+                <p style="text-align: center;">
+                    <span style="font-size: 40px; font-weight: bold; color: #ff0000;">화이팅🔥</span>
+                </p>
             </section>
         </div>
         <div class="section desktopOnly" id="section3" data-disable="down">
@@ -522,8 +530,8 @@
         });
 
         document.getElementById('btn3').addEventListener('click', function () {
-        fullpage_api.moveTo(3);
-    });
+            fullpage_api.moveTo(3);
+        });
 
     </script>
 
