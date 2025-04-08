@@ -9,19 +9,16 @@
     <meta name="keywords" content="fullpage,jquery,demo,screen,fullscreen,navigation,control arrows, dots" />
     <meta name="Resource-type" content="Document" />
 
-    <link rel="stylesheet" type="text/css" href="examples.css" />
-    <link rel="stylesheet" type="text/css" href="fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="css\examples.css" />
+    <link rel="stylesheet" type="text/css" href="css\fullpage.css" />
 
     <style>
-        /* Style for our header texts
-    * --------------------------------------- */
         @font-face {
             font-family: 'GmarketSansMedium';
             src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
             font-weight: normal;
             font-style: normal;
         }
-
 
         h1 {
             font-size: 10em;
@@ -35,8 +32,6 @@
             color: #fff;
         }
 
-        /* Centered texts in each section
-    * --------------------------------------- */
         .section {
             text-align: center;
         }
@@ -45,27 +40,19 @@
         #section1 {
             background-color: #fff;
             background-image: none;
-
-
         }
 
         /* 두번째페이지 */
         #section2 {
             background-color: #fff;
             background-image: none;
-
-
         }
 
         /* 세번째페이지 */
         #section3 {
             background-color: #fff;
             background-image: none;
-
-
         }
-
-
 
         body {
             margin: 0;
@@ -319,16 +306,32 @@
         }
     </style>
 
+    <script type="text/javascript" src="js/fullpage.js"></script>
+    <script type="text/javascript" src="js/examples.js"></script>
+
+    <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', function () {
+            var myFullpage = new fullpage('#fullpage', {
+                sectionsColor: ['white'],
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage', 'more0', 'more1', 'more2', 'more3', 'more4'],
+                slidesNavigation: true,
+                navigation: true,
+                menu: '#menu',
+                scrollBar: true
+            });
+
+            document.getElementById('search-btn').addEventListener('click', function () {
+                fullpage_api.moveTo(2);
+            });
+
+            document.getElementById('btn3').addEventListener('click', function () {
+                fullpage_api.moveTo(3);
+            });
+        });
+    </script>
 </head>
 
 <body>
-
-
-
-
-
-
-    <!-- fullPage.js container -->
     <div id="fullpage">
         <div class="section hidden" id="section1">
             <div class="slide">
@@ -341,10 +344,7 @@
                 </div>
             </div>
 
-
-
         </div>
-
         <div class="section" id="section2">
             <section class="team-intro">
                 <p>🌱저희는 Spring 7기에서 함께하게 된 <span class="rainbow-text">Code5ive</span>입니다❗</p>
@@ -508,35 +508,6 @@
                 </section>
             </div>
         </div>
-
     </div>
-
-    <!-- Normal Scroll From Here On -->
-
-
-    <script type="text/javascript" src="fullpage.js"></script>
-    <script type="text/javascript" src="examples.js"></script>
-
-    <script type="text/javascript">
-        var myFullpage = new fullpage('#fullpage', {
-            sectionsColor: ['white'],
-            anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage', 'lastPage', 'more0', 'more1', 'more2', 'more3', 'more4'],
-            slidesNavigation: true,
-            navigation: true,
-            menu: '#menu',
-            scrollBar: true
-        });
-
-        document.getElementById('search-btn').addEventListener('click', function () {
-            fullpage_api.moveTo(2);
-        });
-
-        document.getElementById('btn3').addEventListener('click', function () {
-            fullpage_api.moveTo(3);
-        });
-
-    </script>
-
 </body>
-
 </html>
