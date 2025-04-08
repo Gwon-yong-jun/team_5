@@ -62,7 +62,7 @@ h1{
 	font-size: 6em;
 }
 p{
-	font-size: 2em;
+	font-size: 15px;
 }
 .intro p{
 	width: 50%;
@@ -281,7 +281,7 @@ h1{
 }
 .section p,
 .intro p{
-	color: #fff;
+	color: #000000;
 }
 
 /* Centered texts in each section
