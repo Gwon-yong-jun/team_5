@@ -241,7 +241,7 @@
         document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("search-btn").addEventListener("click", function () {
                 const section = document.getElementById("result-section");
-                section.classList.add("show");
+                fullpage_api.moveTo(2);
             });
         });
     </script>

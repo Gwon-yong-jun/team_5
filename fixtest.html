@@ -15,9 +15,11 @@
     <style>
         /* Style for our header texts
     * --------------------------------------- */
+        @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+    
         h1 {
             font-size: 5em;
-            font-family: arial, helvetica;
+            font-family: "Do Hyeon", sans-serif;
             color: #ff0000;
             margin: 0;
         }
@@ -487,6 +489,12 @@
             menu: '#menu',
             scrollBar: true
         });
+
+        document.getElementById('search-btn').addEventListener('click', function () {
+        fullpage_api.moveTo(2);
+    });
+
+
     </script>
 
 </body>
