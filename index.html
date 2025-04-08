@@ -17,8 +17,10 @@
         }
 
         .logo {
-            font-size: 48px;
+            font-family: Arial, sans-serif;
+            font-size: 100px;
             font-weight: bold;
+            margin-top: -100px;
         }
 
         .g1 {
@@ -46,12 +48,13 @@
         }
 
         .search-box input {
-            width: 400px;
+            width: 800px;
             height: 40px;
             border-radius: 25px;
-            border: 1px solid #ddd;
+            border: 0.4px solid #ddd;
             padding: 0 20px;
             font-size: 16px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
         .search-box button {
@@ -137,13 +140,56 @@
 
         .name {
             font-weight: bold;
-            font-size: 14px;
-            margin-top: 12px;
+            font-size: 35px;
+            margin-top: 35px;
         }
 
         .back-info {
             padding: 20px;
             font-size: 14px;
+        }
+
+        .team-intro {
+            text-align: left;
+            max-width: 900px;
+            margin: 50px auto;
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+
+        .team-intro p:first-child {
+            font-size: 22px;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 25px;
+            border-left: 5px solid #4285F4;
+            padding-left: 15px;
+            background-color: #eaf1fe;
+            border-radius: 4px;
+        }
+
+
+        .team-intro p:not(:first-child) {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin: 6px 0;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 
@@ -160,18 +206,24 @@
 <body>
     <div class="container">
         <h1 class="logo">
-            <span class="g1">code</span><span class="g2">5</span><span class="g3">i</span><span class="g4">v</span><span
+            <span class="g1">Code</span><span class="g2">5</span><span class="g3">i</span><span class="g4">v</span><span
                 class="g5">e</span>
         </h1>
 
         <div class="search-box">
-            <input type="text" placeholder="💡돋보기를 눌러주세요 !!" id="search-input">
+            <input type="text" placeholder="💡스파르타 화이팅🔥" id="search-input">
             <button id="search-btn">🔍</button>
         </div>
 
         <div id="result-section">
             <section class="team-intro">
-                <p>팀소개</p>
+                <p>🌱저희는 백엔드 부트캠프에서 함께하게 된 6명의 팀원으로 구성된 code5ive입니다.</p>
+                <p>팀 이름은 5조라는 조 번호에서 시작됐지만, 그 안엔 저희의 코드에 대한 열정과 다섯 배의 성장 의지를 담고 있어요.</p>
+                <p>이번 프로젝트는 단 1주일 동안 진행되지만, 그 안에서 최대한 많은 걸 배우고 나누자는 마음으로 모였습니다.</p>
+                <p>처음 접하는 기술도 많고, 익숙하지 않은 부분도 있지만, 서로 도우며 하루하루 성장해 나가고 있습니다.</p>
+                <p>짧은 시간이지만, 우리가 함께 만든 시간만큼은 오래 기억에 남을 것 같아요.</p>
+                <p>Code5ive는 단순한 팀 이름이 아니라, 열정과 성장을 향한 우리의 다짐이기도 합니다.</p>
+                <p>비록 시작은 작지만, 이 경험을 통해 더 큰 개발자로 나아갈 첫걸음을 내딛고 있습니다.</p>
             </section>
 
             <section class="members">
@@ -179,7 +231,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="권용준.jpg" alt="멤버 1 이미지">
-                            <p class="name">👤 멤버 1</p>
+                            <p class="name">권용준</p>
                         </div>
                         <div class="card-back">
                             <div class="back-info">
@@ -199,7 +251,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="남다희.jpg" alt="멤버 2 이미지">
-                            <p class="name">👤 멤버 2</p>
+                            <p class="name">남다희</p>
                         </div>
                         <div class="card-back">
                             <div class="back-info">
@@ -219,7 +271,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="임서연.jpg" alt="멤버 3 이미지">
-                            <p class="name">👤 멤버 3</p>
+                            <p class="name">임서연</p>
                         </div>
                         <div class="card-back">
                             <div class="back-info">
@@ -239,7 +291,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="김태현.jpg" alt="멤버 4 이미지">
-                            <p class="name">👤 멤버 4</p>
+                            <p class="name">김태현</p>
                         </div>
                         <div class="card-back">
                             <div class="back-info">
@@ -259,17 +311,17 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="이시원.jpg" alt="멤버 5 이미지">
-                            <p class="name">👤 멤버 5</p>
+                            <p class="name">이시원</p>
                         </div>
                         <div class="card-back">
                             <div class="back-info">
-                                <p> 이름 : </p>
-                                <p> MBTI : </p>
-                                <p> 인스타 :</p>
-                                <p> 깃허브 : </p>
-                                <p> 관심사 : </p>
-                                <p> 나는 어떤 사람일까요? : </p>
-                                <p> 좋아하는 것 TMI : </p>
+                                <p> 이름 : 이시원</p>
+                                <p> MBTI : ISFP</p>
+                                <p> 인스타 : sii__wxn</p>
+                                <p> 깃허브 : leecool-777</p>
+                                <p> 관심사 : 자바 & 스프링😂</p>
+                                <p> 나는 어떤 사람일까요? : 만능엔터테이먼트🚀</p>
+                                <p> 좋아하는 것 TMI : 심레이싱싱🏎️</p>
                             </div>
                         </div>
                     </div>
@@ -279,7 +331,7 @@
                     <div class="card-inner">
                         <div class="card-front">
                             <img src="다운로드 (3).jpg" alt="멤버 6 이미지">
-                            <p class="name">👤 멤버 6</p>
+                            <p class="name">김원준</p>
                         </div>
                         <div class="card-back">
                             <div class="back-info">
