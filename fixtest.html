@@ -160,6 +160,7 @@
             position: relative;
             width: 100%;
             height: 100%;
+            transform: scale(1);
             transition: transform 0.6s;
             transform-style: preserve-3d;
             transition: transform 0.8s ease-in-out;
@@ -167,7 +168,7 @@
         }
 
         .card.flipped .card-inner {
-            transform: rotateY(180deg);
+            transform: rotateY(180deg) scale(1.1);
         }
 
         .card-front,
@@ -178,8 +179,7 @@
             backface-visibility: hidden;
             border-radius: 12px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            background: #f9f9f9;
-            overflow: hidden;
+
         }
 
         .card-front {
@@ -194,10 +194,9 @@
 
         .card-back {
             font-family: 'GmarketSansMedium';
-
-            background-color: #f9f9f9;
+            background-image: url(img/member/cardbackimg.jpg);
             transform: rotateY(180deg);
-            padding: 20px;
+            padding: 2px;
             box-sizing: border-box;
             display: flex;
             align-items: center;
@@ -347,7 +346,8 @@
         </div>
         <div class="section" id="section2">
             <section class="team-intro">
-                <p><button id="btn3" class="button-box">🌱</button>저희는 Spring 7기에서 함께하게 된 <span class="rainbow-text">Code5ive</span>입니다❗</p>
+                <p><button id="btn3" class="button-box">🌱</button>저희는 Spring 7기에서 함께하게 된 <span
+                        class="rainbow-text">Code5ive</span>입니다❗</p>
                 <p>팀 이름은 <span style="color: #4285F4;">5조</span>라는 조 번호에서 시작됐고,</p>
                 <p>그 안엔 저희의 코드에 대한 열정과 <span style="font-weight: bold; color: #34A853;">다섯배
                         !</span>의 성장 의지를 담고 있어요.</p>
@@ -510,4 +510,5 @@
         </div>
     </div>
 </body>
+
 </html>
