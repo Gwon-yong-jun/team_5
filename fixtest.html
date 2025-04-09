@@ -20,7 +20,7 @@
             font-style: normal;
         }
 
-        h1 {
+        .main-logo-title {
             font-size: 10em;
             font-weight: bold;
             font-family: Arial, sans-serif;
@@ -131,6 +131,21 @@
             opacity: 1;
             transform: translateY(0);
             pointer-events: auto;
+        }
+
+        .member-title-h1 {
+            font-size: 7em;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .members-title-h2 {
+            font-size: 2.5em;
+            text-align: center;
+            margin: 10px 0 5px;
+            color: #333;
+            font-family: 'GmarketSansMedium';
+            color: #333;
         }
 
         .members {
@@ -334,8 +349,8 @@
     <div id="fullpage">
         <div class="section hidden" id="section1">
             <div class="slide">
-                <h1><span class="g1">Code</span><span class="g2">5</span><span class="g3">i</span><span
-                        class="g4">v</span><span class="g5">e</span></h1>
+                <h1 class="main-logo-title"><span class="g1">Code</span><span class="g2">5</span><span
+                        class="g3">i</span><span class="g4">v</span><span class="g5">e</span></h1>
 
                 <div class="search-box">
                     <input type="text" placeholder="💡스파르타 화이팅🔥" id="search-input">
@@ -365,6 +380,9 @@
             </section>
         </div>
         <div class="section desktopOnly" id="section3" data-disable="down">
+            <h1 class="member-title-h1"><span class="g1">Code</span><span class="g2">5</span><span
+                    class="g3">i</span><span class="g4">v</span><span class="g5">e</span></h1>
+            <h2 class="members-title-h2">멤버를 소개합니다✨</h2>
             <div>
                 <section class="members">
                     <div class="card" onclick="this.classList.toggle('flipped')">
