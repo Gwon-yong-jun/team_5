@@ -44,14 +44,21 @@
 
         /* 두번째페이지 */
         #section2 {
-            background-color: #fff;
-            background-image: none;
+            background: linear-gradient(180deg,
+                    #ffffff 0%,
+                    rgba(240, 255, 250, 0.5) 50%,
+                    rgba(230, 255, 250, 0.5) 100%);
+            background-size: cover;
+            background-position: center;
         }
 
         /* 세번째페이지 */
         #section3 {
-            background-color: #fff;
-            background-image: none;
+            background: linear-gradient(180deg,
+                    rgba(230, 255, 250, 0.5) 0%,
+                    rgba(240, 255, 240, 0.5) 100%) !important;
+            background-size: cover;
+            background-position: center;
         }
 
         body {
@@ -60,13 +67,6 @@
             background: #fff;
             text-align: center;
             padding-top: 10%;
-        }
-
-        .logo {
-            font-family: Arial, sans-serif;
-            font-size: 100px;
-            font-weight: bold;
-            margin-top: -100px;
         }
 
         .g1 {
@@ -90,17 +90,18 @@
         }
 
         .search-box {
-            margin-top: 30px;
+            margin-top: 50px;
             height: 80px;
+            margin-bottom: 300px;
         }
 
         .search-box input {
             width: 800px;
-            height: 40px;
+            height: 45px;
             border-radius: 25px;
             border: 0.4px solid #ddd;
             padding: 0 20px;
-            font-size: 16px;
+            font-size: 20px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
@@ -137,6 +138,7 @@
             font-size: 7em;
             text-align: center;
             font-weight: bold;
+            margin-top: -20px;
         }
 
         .members-title-h2 {
@@ -145,7 +147,7 @@
             margin: 10px 0 5px;
             color: #333;
             font-family: 'GmarketSansMedium';
-            color: #333;
+            margin-bottom: 80px;
         }
 
         .members {
@@ -209,14 +211,28 @@
 
         .card-back {
             font-family: 'GmarketSansMedium';
-            background-image: url(img/member/cardbackimg.jpg);
+
             transform: rotateY(180deg);
             padding: 2px;
             box-sizing: border-box;
             display: flex;
             align-items: center;
             justify-content: center;
+            overflow: hidden;
+            background: none;
         }
+
+        .card-back::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url(img/search/photo.jpg);
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 0;
+        }
+
 
         /* 카드크기변경하는곳 */
         .card-front img {
@@ -235,9 +251,25 @@
         }
 
         .back-info {
+            position: relative;
+            z-index: 1;
             padding: 20px;
             font-size: 20px;
         }
+
+        .mbti-box {
+            background: linear-gradient(to right, #e0f7fa, #fce4ec);
+            padding: 10px 15px;
+            border-radius: 12px;
+            color: #333;
+            font-weight: 600;
+            font-size: 1.1rem;
+            margin: 10px 0;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+            font-family: 'GmarketSansMedium';
+            display: inline-block;
+        }
+
 
         .team-intro {
             font-family: 'GmarketSansMedium';
@@ -311,12 +343,61 @@
             }
         }
 
-        .rainbow-text {
-            background: linear-gradient(to right, red, orange, rgb(203, 216, 15), green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .link-info {
+            margin-bottom: 15px;
+        }
+
+        .info-divider {
+            border: none;
+            height: 1px;
+            background-color: #ddd;
+            margin: 15px 0;
+        }
+
+        @keyframes rainbow {
+            0% {
+                color: red;
+            }
+
+            14% {
+                color: orange;
+            }
+
+            28% {
+                color: yellow;
+            }
+
+            42% {
+                color: green;
+            }
+
+            57% {
+                color: blue;
+            }
+
+            71% {
+                color: indigo;
+            }
+
+            85% {
+                color: violet;
+            }
+
+            100% {
+                color: red;
+            }
+        }
+
+        a.rainbow-hover {
+            transition: all 0.3s ease;
+            /* 마우스 올릴 때 부드럽게 변하도록 */
+        }
+
+        a.rainbow-hover:hover {
+            animation: rainbow 1.5s ease-in-out infinite;
             font-weight: bold;
-            font-size: 1.7rem;
+            transform: scale(3);
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
         }
     </style>
 
@@ -353,7 +434,7 @@
                         class="g3">i</span><span class="g4">v</span><span class="g5">e</span></h1>
 
                 <div class="search-box">
-                    <input type="text" placeholder="💡스파르타 화이팅🔥" id="search-input">
+                    <input type="text" placeholder="스파르타 Spring 7기 화이팅🔥" id="search-input">
                     <button id="search-btn">🔍</button>
                 </div>
             </div>
@@ -362,7 +443,8 @@
         <div class="section" id="section2">
             <section class="team-intro">
                 <p><button id="btn3" class="button-box">🌱</button>저희는 Spring 7기에서 함께하게 된 <span
-                        class="rainbow-text">Code5ive</span>입니다❗</p>
+                        class="g1">Code</span><span class="g2">5</span><span class="g3">i</span><span
+                        class="g4">v</span><span class="g5">e</span>입니다❗</p>
                 <p>팀 이름은 <span style="color: #4285F4;">5조</span>라는 조 번호에서 시작됐고,</p>
                 <p>그 안엔 저희의 코드에 대한 열정과 <span style="font-weight: bold; color: #34A853;">다섯배
                         !</span>의 성장 의지를 담고 있어요.</p>
@@ -370,7 +452,8 @@
                 <p>처음 접하는 기술도 많고 익숙하지 않은 부분도 있었음에도 불구하고</p>
                 <p>서로 도우며 하루하루 성장해 나가고 있습니다.</p>
                 <p>짧은 시간이지만, 우리가 함께 만든 시간만큼은 오래 기억에 남을 것 같습니다.</p>
-                <p><span class="rainbow-text">Code5ive</span>는 단순한 팀 이름이 아니라, <span style="color: #FBBC05;">열정과
+                <p><span class="g1">Code</span><span class="g2">5</span><span class="g3">i</span><span
+                        class="g4">v</span><span class="g5">e</span>는 단순한 팀 이름이 아니라, <span style="color: #FBBC05;">열정과
                         성장</span>을 향한 우리의
                     다짐이기도 합니다 😂</p>
                 <p>우리는 앞으로 이 프로젝트를 통해 더 큰 개발자로 나아갈 첫걸음을 내딛어 보려고합니다 ! </p>
@@ -393,16 +476,20 @@
                             </div>
                             <div class="card-back">
                                 <div class="back-info">
-                                    <p style="font-size: 150%;">권용준</p>
-                                    <p> MBTI : INTP</p>
+                                    <p style="font-size: 150%;font-weight: bold;">권용준</p>
+                                    <p class="mbti-box">🧠 MBTI : <strong>INTP</strong></p>
+
                                     <p class="insta-link"> <img src="img\logo\instalogo.png"> : gwonyj91</p>
                                     <p class="github-link"> <img src="img\logo\githublogo.png"> : <a
-                                            href="https://github.com/Gwon-yong-jun">Gwon-yong-jun</a></p>
-                                    <p class="blog-link"> <img src="img\logo\naverlogo.png"> : <a
-                                            href="https://blog.naver.com/yoyo99828">yoyo99828</a></p>
-                                    <p> 관심사 : 개발자</p>
-                                    <p> 나는 어떤 사람일까요? : 조용하지만 리더십은 있다.</p>
-                                    <p> 좋아하는 것 TMI : 노래듣는 것</p>
+                                            class="rainbow-hover" href="https://github.com/Gwon-yong-jun"
+                                            target="_blank">
+                                            Gwon-yong-jun</a></p>
+                                    <p class="blog-link"> <img src="img\logo\naverlogo.png"> : <a class="rainbow-hover"
+                                            href="https://blog.naver.com/yoyo99828" target="_blank">yoyo99828</a></p>
+                                    <hr class="info-divider" />
+                                    <p> 🎯관심사: 개발자</p>
+                                    <p> 🤔나는 어떤 사람: 리더십 충만</p>
+                                    <p> 🚀좋아하는 것: 노래듣는 것</p>
                                 </div>
                             </div>
                         </div>
@@ -416,16 +503,19 @@
                             </div>
                             <div class="card-back">
                                 <div class="back-info">
-                                    <p style="font-size: 150%;">남다희</p>
-                                    <p> MBTI : ISTP</p>
+                                    <p style="font-size: 150%;font-weight: bold;">남다희</p>
+                                    <p class="mbti-box">🧠 MBTI : <strong>INTP</strong></p>
                                     <p class="insta-link"> <img src="img\logo\instalogo.png"> : dkanrjsk.34</p>
                                     <p class="github-link"> <img src="img\logo\githublogo.png"> : <a
-                                            href="https://github.com/Dan-1515">Dan-1515</a></p>
+                                            class="rainbow-hover" href="https://github.com/Dan-1515"
+                                            target="_blank">Dan-1515</a></p>
                                     <p class="blog-link"> <img src="img\logo\tistorylogo.png"> : <a
-                                            href="https://all723.tistory.com">all723</a></p>
-                                    <p> 관심사 : 개발 , 강아지</p>
-                                    <p> 나는 어떤 사람일까요? : 타인의 의견을 먼저 듣는 사람이다.</p>
-                                    <p> 좋아하는 것 TMI : 강아지, 노래듣기, 게임하기</p>
+                                            class="rainbow-hover" href="https://all723.tistory.com"
+                                            target="_blank">all723</a></p>
+                                    <hr class="info-divider" />
+                                    <p> 🎯관심사: 개발, 강아지</p>
+                                    <p> 🤔나는 어떤 사람: 타인의 의견을 먼저 듣는 사람</p>
+                                    <p> 🚀좋아하는 것: 강아지, 노래듣기, 게임하기</p>
                                 </div>
                             </div>
                         </div>
@@ -439,16 +529,18 @@
                             </div>
                             <div class="card-back">
                                 <div class="back-info">
-                                    <p style="font-size: 150%;">임서연</p>
-                                    <p> MBTI : ISTP</p>
+                                    <p style="font-size: 150%;font-weight: bold;">임서연</p>
+                                    <p class="mbti-box">🧠 MBTI : <strong>ISTP</strong></p>
                                     <p class="insta-link"> <img src="img\logo\instalogo.png"> : syumzz_</p>
                                     <p class="github-link"> <img src="img\logo\githublogo.png"> : <a
-                                            href="https://github.com/syumz">syumz</a></p>
-                                    <p class="blog-link"> <img src="img\logo\veloglogo.jpeg"> : <a
-                                            href="https://velog.io/@syumz/posts">syumz</a></p>
-                                    <p> 관심사 : 🍳, 🐈, 🎵, 🎮</p>
-                                    <p> 나는 어떤 사람일까요? : 새로운 도전을 좋아하는 사람</p>
-                                    <p> 좋아하는 것 TMI : 귀여운 거 다 좋아합니다</p>
+                                            class="rainbow-hover" href="https://github.com/syumz"
+                                            target="_blank">syumz</a></p>
+                                    <p class="blog-link"> <img src="img\logo\veloglogo.jpeg"> : <a class="rainbow-hover"
+                                            href="https://velog.io/@syumz/posts" target="_blank">syumz</a></p>
+                                    <hr class="info-divider" />
+                                    <p> 🎯관심사: 🍳, 🐈, 🎵, 🎮</p>
+                                    <p> 🤔나는 어떤 사람: 새로운 도전을 좋아하는 사람</p>
+                                    <p> 🚀좋아하는 것: 큐티한거 :)</p>
                                 </div>
                             </div>
                         </div>
@@ -462,16 +554,19 @@
                             </div>
                             <div class="card-back">
                                 <div class="back-info">
-                                    <p style="font-size: 150%;">김태현</p>
-                                    <p> MBTI : INTJ</p>
+                                    <p style="font-size: 150%;font-weight: bold;">김태현</p>
+                                    <p class="mbti-box">🧠 MBTI : <strong>INTJ</strong></p>
                                     <p class="insta-link"> <img src="img\logo\instalogo.png"> : rlaxogus_z</p>
                                     <p class="github-link"> <img src="img\logo\githublogo.png"> : <a
-                                            href="https://github.com/Huawol">Huawol</a></p>
+                                            class="rainbow-hover" href="https://github.com/Huawol"
+                                            target="_blank">Huawol</a></p>
                                     <p class="blog-link"> <img src="img\logo\tistorylogo.png"> : <a
-                                            href="https://taehyon.tistory.com/">taehyon</a></p>
-                                    <p> 관심사 : 유튜브 </p>
-                                    <p> 나는 어떤 사람일까요? : 하고 싶은거 하는 사람</p>
-                                    <p> 좋아하는 것 TMI : 침대에 누워있기기</p>
+                                            class="rainbow-hover" href="https://taehyon.tistory.com/"
+                                            target="_blank">taehyon</a></p>
+                                    <hr class="info-divider" />
+                                    <p> 🎯관심사: 유튜브 </p>
+                                    <p> 🤔나는 어떤 사람: 하고 싶은거 하는 사람</p>
+                                    <p> 🚀좋아하는 것: 침대에 누워있기</p>
                                 </div>
                             </div>
                         </div>
@@ -485,16 +580,19 @@
                             </div>
                             <div class="card-back">
                                 <div class="back-info">
-                                    <p style="font-size: 150%;">이시원</p>
-                                    <p> MBTI : ISFP</p>
+                                    <p style="font-size: 150%;font-weight: bold;">이시원</p>
+                                    <p class="mbti-box">🧠 MBTI : <strong>ISFP</strong></p>
                                     <p class="insta-link"> <img src="img\logo\instalogo.png"> : sii__wxn</p>
                                     <p class="github-link"> <img src="img\logo\githublogo.png"> : <a
-                                            href="https://github.com/leecool-777">leecool-777</a></p>
+                                            class="rainbow-hover" href="https://github.com/leecool-777"
+                                            target="_blank">leecool-777</a></p>
                                     <p class="blog-link"> <img src="img\logo\tistorylogo.png"> : <a
-                                            href="https://siwon0726.tistory.com/">siwon0726</a></p>
-                                    <p> 관심사 : 자바 & 스프링😂</p>
-                                    <p> 나는 어떤 사람일까요? : 만능엔터테이먼트🚀</p>
-                                    <p> 좋아하는 것 TMI : 심레이싱🏎️</p>
+                                            class="rainbow-hover" href="https://siwon0726.tistory.com/"
+                                            target="_blank">siwon0726</a></p>
+                                    <hr class="info-divider" />
+                                    <p> 🎯관심사: 자바 & 스프링😂</p>
+                                    <p> 🤔나는 어떤 사람: 만능엔터테이먼트🚀</p>
+                                    <p> 🚀좋아하는 것: 심레이싱🏎️</p>
                                 </div>
                             </div>
                         </div>
@@ -508,16 +606,19 @@
                             </div>
                             <div class="card-back">
                                 <div class="back-info">
-                                    <p style="font-size: 150%;">김원준</p>
-                                    <p> MBTI : ISFP</p>
+                                    <p style="font-size: 150%;font-weight: bold;">김원준</p>
+                                    <p class="mbti-box">🧠 MBTI : <strong>ISFP</strong></p>
                                     <p class="insta-link"> <img src="img\logo\instalogo.png"> : X</p>
                                     <p class="github-link"> <img src="img\logo\githublogo.png"> : <a
-                                            href="https://github.com/kimwonjun1">kimwonjun1</a></p>
+                                            class="rainbow-hover" href="https://github.com/kimwonjun1"
+                                            target="_blank">kimwonjun1</a></p>
                                     <p class="blog-link"> <img src="img\logo\tistorylogo.png"> : <a
-                                            href="https://monkeydmw.tistory.com/">monkeydmw</a></p>
-                                    <p> 관심사 : 코딩</p>
-                                    <p> 나는 어떤 사람일까요? : 게으른 사람</p>
-                                    <p> 좋아하는 것 TMI : 누워서 유튜브 보기</p>
+                                            class="rainbow-hover" href="https://monkeydmw.tistory.com/"
+                                            target="_blank">monkeydmw</a></p>
+                                    <hr class="info-divider" />
+                                    <p> 🎯관심사: 코딩</p>
+                                    <p> 🤔나는 어떤 사람: 게으른 사람</p>
+                                    <p> 🚀좋아하는 것: 누워서 유튜브 보기</p>
 
                                 </div>
                             </div>
